@@ -1,5 +1,7 @@
 import { rubik } from '@/app/ui/fonts'
 import './globals.css'
+import NavBar from '@/app/ui/navbar/Navbar'
+
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,7 +11,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={`${rubik.className} antialiased`}>{children}</body>
+      <body className={`${rubik.className} antialiased`}>
+        <header>
+          <NavBar/>
+        </header>
+        {children}
+      </body>
     </html>
   )
 }
