@@ -37,15 +37,42 @@ const Nav = () => {
 
   return (
     <>
-      <nav className='grid grid-cols-3' aria-hidden={mobileMenuOpen && 'true'}>
-        <button className='md:hidden' onClick={toggleMobileMenu}>
+      <nav
+        aria-hidden={mobileMenuOpen && 'true'}
+        className='
+          grid 
+          grid-cols-3 
+          bg-background
+          p-4
+          container
+          items-center
+          '
+      >
+        <button
+          onClick={toggleMobileMenu}
+          className='
+            md:hidden 
+            text-primary
+            hover:text-secondary
+            
+                  transition-colors duration-300
+          '
+        >
           <IoMenu />
         </button>
 
-        <ul className='hidden md:flex'>
+        <ul className='hidden md:flex space-x-3'>
           {navigation.map(({ name, href }) => (
             <li>
-              <a href={href}>
+              <a
+                href={href}
+                className='
+                  text-primary
+                  hover:text-secondary
+                  hover:font-bold 
+                  transition-colors duration-300
+                '
+              >
                 <span>{name}</span>
               </a>
             </li>
@@ -53,13 +80,21 @@ const Nav = () => {
         </ul>
 
         <a href='/#home'>
-          <img src={logo} alt='Oscar Sancho' />
+          <img
+            src={logo}
+            alt='Oscar Sancho'
+            className='
+              w-16
+              rounded-full'
+          />
         </a>
 
-        <ul className='flex'>
+        <ul className='flex space-x-4'>
           {contactLinks.map(({ href, icon }) => (
             <li>
-              <a href={href}>{icon}</a>
+              <a href={href}
+              className='text-primary hover:text-secondary
+              transition-colors duration-300'>{icon}</a>
             </li>
           ))}
         </ul>
@@ -68,14 +103,14 @@ const Nav = () => {
       {mobileMenuOpen && (
         <div onClick={toggleMobileMenu} onBlur={toggleMobileMenu}>
           <ul>
-          {navigation.map(({ name, href, icon }) => (
-            <li>
-              <a href={href}>
-                {icon}
-                <span>{name}</span>
-              </a>
-            </li>
-          ))}
+            {navigation.map(({ name, href, icon }) => (
+              <li>
+                <a href={href}>
+                  {icon}
+                  <span>{name}</span>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       )}

@@ -1,4 +1,4 @@
-import NavBar from '@/app/ui/navbar/Navbar'
+import NavBar from '@/app/ui/Navbar'
 
 const page = () => {
   return (
