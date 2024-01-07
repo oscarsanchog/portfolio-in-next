@@ -1,6 +1,6 @@
 import { rubik } from '@/app/ui/fonts'
 import './globals.css'
-import NavBar from '@/app/ui/Navbar'
+import NavBar from '@/app/ui/components/Navbar'
 
 
 export const metadata = {
