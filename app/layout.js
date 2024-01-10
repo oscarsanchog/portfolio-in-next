@@ -12,8 +12,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className={`${rubik.className} antialiased`}>
-        <NavBar/>
-        {children}
+        <header>
+          <NavBar/>
+        </header>
+          {children}
       </body>
     </html>
   )

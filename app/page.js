@@ -6,10 +6,12 @@ import Projects from './ui/views/Projects';
 const page = () => {
   return (
     <>
+    <main className='mx-[7rem]'>
       <Home/>
       <Projects/>
       <Skills/>
       <Contact/>
+    </main>
     </>
   );
 }
