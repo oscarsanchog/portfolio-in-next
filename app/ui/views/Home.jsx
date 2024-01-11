@@ -10,7 +10,7 @@ const Home = () => {
   const curriculum = 'Curriculum Vitae'
 
   return (
-    <section id='home' className='flex mt-[4rem] justify-between'>
+    <section id='home' className='flex mt-[4rem] justify-between items-center'>
       <div>
         <span className=' flex gap-2 items-center text-2xl'>
           Hola
@@ -20,7 +20,7 @@ const Home = () => {
         </span>
 
         <div>
-          <div className='flex items-center gap-[1rem] my-[2rem] ml-[2rem]'>
+          <div className='flex items-center gap-[1rem] mt-[2rem] mb-[1rem] ml-[2rem]'>
             <span className='text-3xl'>Soy</span>
             <h1 className='text-8xl'>Óscar Sancho</h1>
           </div>
@@ -33,10 +33,12 @@ const Home = () => {
 
           <p className='ml-[2rem] my-[2rem] max-w-2xl text-pretty'>
             Resido en Santiago de Chile y me enfoco la entrega de soluciones de
-            alta calidad y valor.<br />
+            alta calidad y valor.
+            <br />
             Disfruto colaborando en equipos multidisciplinarios para alcanzar
             objetivos comunes y me fascina conectar con otros profesionales
-            apasionados por el desarrollo de software.<br />
+            apasionados por el desarrollo de software.
+            <br />
             Contáctame para crear juntos.
           </p>
 
@@ -50,18 +52,20 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='my-auto'>
-        <a target='_blank' href={contactLinks[0].href} >
+      <div className=' '>
+        <a target='_blank' href={contactLinks[0].href} className=''>
           <Image
             src={face}
             alt="Óscar Sancho's face"
             width={400}
             height={400}
-            className='rounded-full'
+            className='rounded-full absolute '
           />
         </a>
+        <div className='bg-secondary p-[13rem] rounded-full relative -z-10 ' />
       </div>
     </section>
   )
 }
+
 export default Home
