@@ -1,10 +1,81 @@
-import { projects } from "@/app/lib/data"
+'use client'
+
+import { projects } from '@/app/lib/data'
+import MainProject from '../components/MainProject'
+import { useState } from 'react'
+import Project from '../components/Project'
+import Button from '../components/Button'
 
 const Projects = () => {
+  const [showMoreProjects, setShowMoreProjects] = useState(false)
+  const less = 'Ver menos'
+  const more = 'Mostrar más proyectos'
+
+  const mainProjects = projects.filter(
+    (project) =>
+      project.name === 'Mōru App' || project.name === 'Driver Race Finder'
+  )
+
+  const moreProjects = projects.filter(
+    (project) =>
+      project.name !== 'Mōru App' && project.name !== 'Driver Race Finder'
+  )
+
   return (
-    <section className="mt-[4rem]">
-      <h2 className="text-4xl">Proyectos</h2>
-      <div>{projects[0].technologies[0].icon}</div>
+    <section id='projects' className='mt-[5rem]'>
+      <h2 className='text-5xl mb-[3rem]'>Proyectos</h2>
+
+      {mainProjects.map(
+        (
+          { name, description, year, image, link, repository, technologies },
+          index
+        ) => {
+          return (
+              <MainProject
+                key={name}
+                name={name}
+                description={description}
+                year={year}
+                image={image}
+                link={link}
+                repository={repository}
+                technologies={technologies}
+                position={index}
+              />
+          )
+        }
+      )}
+
+      {showMoreProjects && (
+        <section className='flex justify-center gap-[5.9rem]'>
+          {moreProjects.map(
+            ({
+              name,
+              description,
+              year,
+              image,
+              link,
+              repository,
+              technologies,
+            }) => (
+              <Project
+                key={name}
+                name={name}
+                description={description}
+                year={year}
+                image={image}
+                link={link}
+                repository={repository}
+                technologies={technologies}
+              />
+            )
+          )}
+        </section>
+      )}
+
+      <button className='m-auto block' onClick={() => setShowMoreProjects(!showMoreProjects)}>
+        <Button word={showMoreProjects ? less : more}/>
+      </button>
     </section>
   )
 }

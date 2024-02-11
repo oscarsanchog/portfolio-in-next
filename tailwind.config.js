@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         background: '#272822',
+        secondarybg: '#3a3b36',
         primary: 'white',
         secondary: '#E14761',
         tertiary: '#e2bcbc',
@@ -16,5 +17,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }

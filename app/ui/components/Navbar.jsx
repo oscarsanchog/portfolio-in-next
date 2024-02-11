@@ -28,8 +28,6 @@ const navigation = [
   { name: 'Contacto', href: '/#contact', icon: <MdEmail />, current: false },
 ]
 
-
-
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
