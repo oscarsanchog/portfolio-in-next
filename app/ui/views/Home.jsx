@@ -10,7 +10,7 @@ const Home = () => {
   const curriculum = 'Curriculum Vitae'
 
   return (
-    <section id='home' className='flex mt-[4rem] justify-between items-center'>
+    <section  className='flex mt-[4rem] justify-between items-center'>
       <div>
         <span className=' flex gap-2 items-center text-2xl'>
           Hola

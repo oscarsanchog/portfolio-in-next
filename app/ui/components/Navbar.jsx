@@ -33,7 +33,7 @@ const Nav = () => {
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
 
   return (
-    <nav>
+    <nav id='home'>
       {/* Sandwich button */}
       <div
         aria-hidden={mobileMenuOpen && 'true'}
