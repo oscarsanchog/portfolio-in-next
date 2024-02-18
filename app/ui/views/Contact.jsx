@@ -31,7 +31,7 @@ const Contact = () => {
           className={`${iconChars.color} ${iconChars.transition}`}
         />
       ),
-      link: 'https://wa.me/qr/QMCPQCFJUCOAN1',
+      link: 'https://wa.me/56930616317',
     },
     {
       name: 'LinkedIn',

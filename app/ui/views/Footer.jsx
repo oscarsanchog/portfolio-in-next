@@ -20,7 +20,7 @@ const contacts = [
   {
     name: '+56 9 3061 6317',
     icon: <FaWhatsapp size={iconChars.size} />,
-    link: 'https://wa.me/qr/QMCPQCFJUCOAN1',
+    link: 'https://wa.me/56930616317',
   },
   {
     name: 'oscar.sancho.gonzalez@gmail.com',
