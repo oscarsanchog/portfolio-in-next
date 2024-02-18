@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <section id='home' className='flex mt-[9rem] justify-between items-center '>
       <div>
-        <span className=' flex gap-2 items-center text-2xl'>
+        <span className=' flex gap-2  items-center text-2xl'>
           Hola
           <span className=' text-xl '>
             <MdWavingHand />
