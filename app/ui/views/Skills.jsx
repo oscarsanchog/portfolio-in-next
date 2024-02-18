@@ -7,19 +7,22 @@ const Skills = () => {
   const [openProjects, setOpenProjects] = useState(false)
   const [projectName, setProjectName] = useState('')
 
-  const handleOnBlur = () => {
+  /* const handleOnBlur = () => {
     setTimeout(() => {
       setOpenProjects(false)
-    }, 100)
-  }
+    }, 220)
+  } */
 
   const technology = (name, icon, projects) => (
-    <div className='relative' onfo>
+    <div key={name} className='relative'>
       {openProjects && projectName === name && (
         <ul className='text-center w-[10rem] py-[.5rem] absolute bottom-[5rem] left-[-3rem] bg-secondary rounded-3xl '>
           <h3 className='font-bold text-lg'>{name}</h3>
           {projects?.map(({ name, link }) => (
-            <li className='my-2 hover:font-bold hover:text-black transition-all duration-300'>
+            <li
+              key={name}
+              className='my-2 hover:font-bold hover:text-black transition-all duration-300'
+            >
               <a href={link} target={link === '/#home' ? '_top' : '_blank'}>
                 {name}
               </a>
@@ -33,8 +36,11 @@ const Skills = () => {
           setOpenProjects(!openProjects)
           setProjectName(name)
         }}
-        onBlur={handleOnBlur}
-        key={name}
+        onBlur={() => {
+          setTimeout(() => {
+            setOpenProjects(false)
+          }, 220)
+        }}
         className='hover:scale-125 hover:text-secondary transition duration-300'
       >
         {icon}
@@ -60,4 +66,5 @@ const Skills = () => {
     </section>
   )
 }
+
 export default Skills

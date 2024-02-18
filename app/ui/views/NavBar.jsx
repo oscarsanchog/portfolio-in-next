@@ -33,11 +33,11 @@ const Nav = () => {
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
 
   return (
-    <nav id='home'>
+    <nav id='home' className=''>
       {/* Sandwich button */}
       <div
         aria-hidden={mobileMenuOpen && 'true'}
-        className='grid grid-cols-3 bg-background px-10 py-6 items-center shadow-2xl '
+        className='grid grid-cols-3 bg-secondarybg px-10 py-6 items-center shadow-2xl '
       >
         <button
           onClick={toggleMobileMenu}
@@ -65,7 +65,7 @@ const Nav = () => {
           <Image
             src={logo}
             alt="Óscar Sancho's logo"
-            className='mx-auto'
+            className='mx-auto transition-all duration-300 hover:w-[4rem]'
             width={59.2}
             height={59.2}
           />

@@ -39,7 +39,7 @@ const Home = () => {
             objetivos comunes y me fascina conectar con otros profesionales
             apasionados por el desarrollo de software.
             <br />
-            Contáctame para crear juntos.
+            Contáctame para desarrollar soluciones juntos.
           </p>
 
           <a
