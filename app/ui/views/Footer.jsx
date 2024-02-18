@@ -38,7 +38,7 @@ const contacts = [
     link: 'https://github.com/oscarsanchog',
   },
   {
-    name: 'Ver Currículum',
+    name: 'Ver currículum',
     icon: <IoDocumentText size={iconChars.size} />,
     link: 'https://drive.google.com/file/d/1f9EPuv6IzqY9B4Kw-AiI3Bj9ukwVh-a2/view?usp=sharing',
   },
@@ -67,6 +67,8 @@ const solutions = [
 const notify = () =>
   window.alert('¡Email "oscar.sancho.gonzalez@gmail.com" copiado con éxito!')
 
+const sizeLogo = 53
+
 const Footer = () => {
   return (
     <div className='flex flex-col  mt-[9rem]'>
@@ -77,8 +79,8 @@ const Footer = () => {
               src={logo}
               alt="Óscar Sancho's logo"
               className='mx-auto transition-all duration-300 hover:w-[4rem]'
-              width={59.2}
-              height={59.2}
+              width={sizeLogo}
+              height={sizeLogo}
             />
           </a>
 
@@ -89,7 +91,7 @@ const Footer = () => {
                   <CopyToClipboard text='oscar.sancho.gonzalez@gmail.com'>
                     <button
                       onClick={notify}
-                      className='flex items-center gap-[.5rem] text-xl transition-all duration-300 hover:font-bold hover:text-secondary'
+                      className='flex items-center gap-[.5rem] text-md transition-all duration-300 hover:font-bold hover:text-secondary'
                     >
                       {icon} <span>{name}</span>
                     </button>
@@ -99,7 +101,7 @@ const Footer = () => {
                     key={name}
                     href={link}
                     target='_blank'
-                    className='flex items-center gap-[.5rem] text-xl transition-all duration-300 hover:font-bold hover:text-secondary'
+                    className='flex items-center gap-[.5rem] text-md transition-all duration-300 hover:font-bold hover:text-secondary'
                   >
                     {icon}
                     <span>{name}</span>
@@ -111,19 +113,19 @@ const Footer = () => {
         </div>
 
         <div className='flex flex-col gap-6 justify-center items-center'>
-          <h3 className='font-semibold text-primary text-2xl'>Soluciones</h3>
+          <h3 className='font-semibold text-primary text-xl'>Soluciones</h3>
 
           <ul className='list-disc'>
             {solutions.map((solution, index) => (
-              <li className='mb-3 text-xl' key={index}>
+              <li className='mb-3 text-md' key={index}>
                 {solution}
               </li>
             ))}
           </ul>
         </div>
 
-        <div className='flex flex-col items-center gap-14'>
-          <span className='font-semibold text-primary text-2xl'>
+        <div className='flex flex-col items-center gap-10'>
+          <span className='font-semibold text-primary text-xl'>
             Sitio desarrollado con:
           </span>
 
@@ -138,7 +140,7 @@ const Footer = () => {
       </div>
 
       <div className=' bg-secondarybg '>
-        <span className=''>
+        <span className='text-sm'>
           &copy; 2024 Hecho con <span className='text-secondary'>♥️</span> por
           Óscar Sancho. Todos los derechos reservados.
         </span>

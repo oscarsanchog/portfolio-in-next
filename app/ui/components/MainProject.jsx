@@ -21,7 +21,7 @@ const MainProject = ({
       <Image
         src={image}
         alt={name}
-        className='object-cover w-[40rem] h-[25rem]'
+        className='object-cover w-[33rem] h-[25rem]'
         width={640}
         height={400}
       />
@@ -31,10 +31,10 @@ const MainProject = ({
   const cardContent = () => (
     <div className='m-auto flex flex-col gap-3'>
       <a href={link} target='_blank'>
-        <h3 className='text-3xl text-secondary font-semibold hover:text-primary hover:font-bold transition-all duration-300'>{name}</h3>
+        <h3 className='text-2xl text-secondary font-semibold hover:text-primary hover:font-bold transition-all duration-300'>{name}</h3>
       </a>
 
-      <p className='italic font-bold text-center text-sm text-tertiary'>{year}</p>
+      <p className='italic font-bold text-center text-xs text-tertiary'>{year}</p>
 
       {repository && (
         <a href={repository} target='_blank' className='m-auto'>
@@ -42,12 +42,12 @@ const MainProject = ({
         </a>
       )}
 
-      <p className='max-w-[20rem] max-h-[12rem] overflow-auto  text-left'>
-        {showFullDescription ? description : `${description.slice(0, 73)} ...`}
+      <p className='max-w-[20rem] max-h-[12rem] overflow-auto text-pretty text-left text-sm'>
+        {showFullDescription ? description : `${description.slice(0, 73)}...`}
       </p>
 
       <button
-        className='m-auto block font-semibold text-secondary hover:text-primary hover:font-bold transition-all duration-300'
+        className='m-auto block font-semibold text-secondary  text-sm hover:text-primary hover:font-bold transition-all duration-300'
         onClick={() => setShowFullDescription(!showFullDescription)}
       >
         {showFullDescription ? 'Ver menos' : 'Ver más'}
