@@ -5,6 +5,7 @@ import MainProject from '../components/MainProject'
 import { useState } from 'react'
 import Project from '../components/Project'
 import Button from '../components/Button'
+import { robotoMono } from '../fonts'
 
 const Projects = () => {
   const [showMoreProjects, setShowMoreProjects] = useState(false)
@@ -22,8 +23,8 @@ const Projects = () => {
   )
 
   return (
-    <section id='projects' className='mt-[5rem]'>
-      <h2 className='text-5xl mb-[3rem]'>Proyectos</h2>
+    <section id='projects' className='mt-[9rem]'>
+      <h2 className={`${robotoMono.className} antialiased text-5xl mb-[3rem]`}>Proyectos</h2>
 
       {mainProjects.map(
         (

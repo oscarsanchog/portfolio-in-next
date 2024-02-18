@@ -1,4 +1,3 @@
-import { FaHandshakeSimple } from 'react-icons/fa6'
 import { robotoMono } from '../fonts'
 import { MdWavingHand } from 'react-icons/md'
 import Button from '../components/Button'
@@ -10,7 +9,7 @@ const Home = () => {
   const curriculum = 'Curriculum Vitae'
 
   return (
-    <section  className='flex mt-[4rem] justify-between items-center'>
+    <section id='home' className='flex mt-[9rem] justify-between items-center '>
       <div>
         <span className=' flex gap-2 items-center text-2xl'>
           Hola
@@ -52,18 +51,19 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=' '>
-        <a target='_blank' href={contactLinks[0].href} className=''>
-          <Image
-            src={face}
-            alt="Óscar Sancho's face"
-            width={400}
-            height={400}
-            className='rounded-full absolute '
-          />
-        </a>
-        <div className='bg-secondary p-[13rem] rounded-full relative -z-10 ' />
-      </div>
+      <a
+        target='_blank'
+        href={contactLinks[0].href}
+        className='rounded-full bg-secondary border-secondary border-r-8 border-b-8'
+      >
+        <Image
+          src={face}
+          alt="Óscar Sancho's face"
+          width={400}
+          height={400}
+          className='rounded-full'
+        />
+      </a>
     </section>
   )
 }

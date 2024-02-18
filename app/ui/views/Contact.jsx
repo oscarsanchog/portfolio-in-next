@@ -21,7 +21,7 @@ const Contact = () => {
           className={`${iconChars.color} ${iconChars.transition}`}
         />
       ),
-      link: 'oscar.sancho.gonzalez@gmail.com',
+      link: 'mailto:oscar.sancho.gonzalez@gmail.com',
     },
     {
       name: 'WhatsApp',
@@ -47,7 +47,7 @@ const Contact = () => {
 
 
   return (
-    <section id='contact' className='mt-[7rem] flex flex-col justify-center items-center gap-[4rem] border-t border-b max-w-screen-xl py-[6rem]'>
+    <section id='contact' className='mt-[13rem] flex flex-col justify-center items-center gap-[4rem] border-t border-b max-w-screen-xl py-[6rem]'>
       {/* <h2 className='text-5xl mb-[2.5rem]'>Contáctame</h2> */}
 
         <h2 className={`${robotoMono.className} antialiased text-[3rem] text-secondary `}>

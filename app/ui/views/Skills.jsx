@@ -2,6 +2,7 @@
 
 import { technologies } from '@/app/lib/data'
 import { useState } from 'react'
+import { robotoMono } from '../fonts'
 
 const Skills = () => {
   const [openProjects, setOpenProjects] = useState(false)
@@ -39,7 +40,7 @@ const Skills = () => {
         onBlur={() => {
           setTimeout(() => {
             setOpenProjects(false)
-          }, 220)
+          }, 230)
         }}
         className='hover:scale-125 hover:text-secondary transition duration-300'
       >
@@ -49,8 +50,8 @@ const Skills = () => {
   )
 
   return (
-    <section id='skills' className='mt-[4rem]'>
-      <h2 className=' text-5xl mb-[3rem]'>Tech Skills</h2>
+    <section id='skills' className='mt-[9rem]'>
+      <h2 className={`${robotoMono.className} antialiased text-5xl mb-[3rem]`}>Tech Skills</h2>
 
       <div className='h-auto mb-[3rem]  flex justify-evenly'>
         {technologies

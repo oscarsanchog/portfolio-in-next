@@ -6,5 +6,5 @@ export const face = 'https://res.cloudinary.com/dwadajlyw/image/upload/v17048501
 export const contactLinks = [
   { href: 'https://www.linkedin.com/in/oscarsanchog/', icon: <FaLinkedin /> },
   { href: 'https://github.com/oscarsanchog', icon: <FaGithub /> },
-  { href: '/#contact', icon: <MdEmail /> },
+  { href: 'mailto:oscar.sancho.gonzalez@gmail.com', icon: <MdEmail /> },
 ]

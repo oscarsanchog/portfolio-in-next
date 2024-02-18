@@ -5,6 +5,7 @@ import { MdBusinessCenter, MdOutlineComputer, MdEmail } from 'react-icons/md'
 import { IoMenu } from 'react-icons/io5'
 
 import { useState } from 'react'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import { logo } from '@/public/imgs'
 import { robotoMono } from '../fonts'
@@ -31,13 +32,15 @@ const navigation = [
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
+  const notify = () =>
+    window.alert('¡Email "oscar.sancho.gonzalez@gmail.com" copiado con éxito!')
 
   return (
-    <nav id='home' className=''>
+    <nav className='fixed top-0 right-0 left-0 z-40'>
       {/* Sandwich button */}
       <div
         aria-hidden={mobileMenuOpen && 'true'}
-        className='grid grid-cols-3 bg-secondarybg px-10 py-6 items-center shadow-2xl '
+        className='  grid grid-cols-3 bg-background px-10 py-6 items-center shadow-2xl '
       >
         <button
           onClick={toggleMobileMenu}
@@ -75,13 +78,24 @@ const Nav = () => {
         <ul className='flex space-x-7 justify-end '>
           {contactLinks.map(({ href, icon }) => (
             <li key={href}>
-              <a
-                target={href === '/#contact' ? '_self' : '_blank'}
-                href={href}
-                className='text-primary hover:text-secondary transition-colors duration-300'
-              >
-                <span className='text-xl'>{icon}</span>
-              </a>
+              {href.includes('@gmail.com') ? (
+                <CopyToClipboard text={'oscar.sancho.gonzalez@gmail.com'}>
+                  <button
+                    onClick={notify}
+                    className='text-xl text-primary hover:text-secondary transition-colors duration-300'
+                  >
+                    {icon}
+                  </button>
+                </CopyToClipboard>
+              ) : (
+                <a
+                  target='_blank'
+                  href={href}
+                  className='text-primary hover:text-secondary transition-colors duration-300'
+                >
+                  <span className='text-xl'>{icon}</span>
+                </a>
+              )}
             </li>
           ))}
         </ul>
@@ -92,7 +106,7 @@ const Nav = () => {
         onClick={toggleMobileMenu}
         className={`${
           !mobileMenuOpen && 'hidden'
-        } bg-gray-600/50 top-0 min-h-screen w-full fixed backdrop-blur-sm`}
+        } bg-gray-600/50 top-0 min-h-screen w-full  backdrop-blur-sm `}
       />
 
       <div

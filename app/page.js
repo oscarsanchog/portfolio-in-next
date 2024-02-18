@@ -8,7 +8,7 @@ import NavBar from '@/app/ui/views/NavBar'
 const page = () => {
   return (
     <>
-      <header>
+      <header >
         <NavBar />
       </header>
 

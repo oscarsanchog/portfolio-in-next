@@ -1,3 +1,5 @@
+'use client'
+
 import { logo } from '@/public/imgs'
 import Image from 'next/image'
 import { FaWhatsapp } from 'react-icons/fa'
@@ -5,7 +7,7 @@ import { MdEmail } from 'react-icons/md'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { IoDocumentText } from 'react-icons/io5'
 import { technologies } from '@/app/lib/data'
-import { robotoMono } from '../fonts'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 const iconChars = {
   size: 18,
@@ -23,7 +25,7 @@ const contacts = [
   {
     name: 'oscar.sancho.gonzalez@gmail.com',
     icon: <MdEmail size={iconChars.size} />,
-    link: 'oscar.sancho.gonzalez@gmail.com',
+    link: 'mailto:oscar.sancho.gonzalez@gmail.com',
   },
   {
     name: 'linkedin.com/in/oscarsanchog',
@@ -62,9 +64,12 @@ const solutions = [
   'Tecnologías acordes al mercado',
 ]
 
+const notify = () =>
+  window.alert('¡Email "oscar.sancho.gonzalez@gmail.com" copiado con éxito!')
+
 const Footer = () => {
   return (
-    <div className='flex flex-col '>
+    <div className='flex flex-col  mt-[9rem]'>
       <div className=' py-[4rem] mt-[7rem]  bg-secondarybg grid grid-cols-3'>
         <div className=' mt-1 flex flex-col items-center gap-[2rem]'>
           <a title='Óscar Sancho' href='/#home' className=''>
@@ -77,19 +82,32 @@ const Footer = () => {
             />
           </a>
 
-          <div className=' flex flex-col gap-5 w-[22rem]'>
+          <ul className=' flex flex-col gap-5 w-[22rem]'>
             {contacts.map(({ name, icon, link }) => (
-              <a
-                key={name}
-                href={link}
-                target='_blank'
-                className='flex items-center gap-[.5rem] text-xl transition-all duration-300 hover:font-bold hover:text-secondary'
-              >
-                {icon}
-                <span>{name}</span>
-              </a>
+              <li key={name}>
+                {link.includes('@gmail.com') ? (
+                  <CopyToClipboard text='oscar.sancho.gonzalez@gmail.com'>
+                    <button
+                      onClick={notify}
+                      className='flex items-center gap-[.5rem] text-xl transition-all duration-300 hover:font-bold hover:text-secondary'
+                    >
+                      {icon} <span>{name}</span>
+                    </button>
+                  </CopyToClipboard>
+                ) : (
+                  <a
+                    key={name}
+                    href={link}
+                    target='_blank'
+                    className='flex items-center gap-[.5rem] text-xl transition-all duration-300 hover:font-bold hover:text-secondary'
+                  >
+                    {icon}
+                    <span>{name}</span>
+                  </a>
+                )}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
         <div className='flex flex-col gap-6 justify-center items-center'>
