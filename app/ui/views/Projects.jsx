@@ -24,27 +24,27 @@ const Projects = () => {
 
   return (
     <section id='projects' className='mt-[9rem]'>
-      <h2 className={`${robotoMono.className} antialiased text-5xl mb-[3rem]`}>Proyectos</h2>
+      <h2 className={`${robotoMono.className} antialiased text-5xl mb-[3rem]`}>
+        Proyectos
+      </h2>
 
       {mainProjects.map(
         (
           { name, description, year, image, link, repository, technologies },
           index
-        ) => {
-          return (
-              <MainProject
-                key={name}
-                name={name}
-                description={description}
-                year={year}
-                image={image}
-                link={link}
-                repository={repository}
-                technologies={technologies}
-                position={index}
-              />
-          )
-        }
+        ) => (
+          <MainProject
+            key={name}
+            name={name}
+            description={description}
+            year={year}
+            image={image}
+            link={link}
+            repository={repository}
+            technologies={technologies}
+            position={index}
+          />
+        )
       )}
 
       {showMoreProjects && (
@@ -74,8 +74,11 @@ const Projects = () => {
         </section>
       )}
 
-      <button className='m-auto block' onClick={() => setShowMoreProjects(!showMoreProjects)}>
-        <Button word={showMoreProjects ? less : more}/>
+      <button
+        className='m-auto block'
+        onClick={() => setShowMoreProjects(!showMoreProjects)}
+      >
+        <Button word={showMoreProjects ? less : more} />
       </button>
     </section>
   )

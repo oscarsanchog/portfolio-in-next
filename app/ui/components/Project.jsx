@@ -40,19 +40,19 @@ const Project = ({
               <FaGithub className=' hover:text-tertiary transition duration-300' />
             </a>
           ) : (
-            <p className='italic font-bold text-center text-sm text-tertiary'>
+            <p className='italic font-bold text-center text-xs text-tertiary'>
               {year}
             </p>
           )}
 
-          <p className='max-w-[16rem] max-h-[6rem] overflow-auto  text-left'>
+          <p className='max-w-[16rem] max-h-[6rem] overflow-auto text-pretty text-sm text-left'>
             {showFullDescription
               ? description
               : `${description.slice(0, 73)} ...`}
           </p>
 
           <button
-            className='m-auto block font-semibold text-secondary hover:text-primary hover:font-bold transition-all duration-300'
+            className='m-auto block text-sm font-semibold text-secondary hover:text-primary hover:font-bold transition-all duration-300'
             onClick={() => setShowFullDescription(!showFullDescription)}
           >
             {showFullDescription ? 'Ver menos' : 'Ver más'}

@@ -5,13 +5,14 @@ import { face } from '@/public/imgs'
 import { contactLinks } from '@/public/imgs'
 import Image from 'next/image'
 
-const Home = () => {
-  const curriculum = 'Curriculum Vitae'
+const curriculum = 'Curriculum Vitae'
+const imageSize = 350
 
+const Home = () => {
   return (
     <section id='home' className='flex mt-[9rem] justify-between items-center '>
       <div>
-        <span className=' flex gap-2  items-center text-2xl'>
+        <span className=' relative  flex gap-2  items-center text-xl'>
           Hola
           <span className=' text-xl '>
             <MdWavingHand />
@@ -19,18 +20,18 @@ const Home = () => {
         </span>
 
         <div>
-          <div className='flex items-center gap-[1rem] mt-[2rem] mb-[1rem] '>
-            <span className='text-3xl'>Soy</span>
-            <h1 className='text-8xl'>Óscar Sancho</h1>
+          <div className='flex items-center gap-[1rem] mt-[1.3rem] mb-[1.5rem] relative right-[3.7rem]'>
+            <span className='text-2xl'>Soy</span>
+            <h1 className='text-7xl'>Óscar Sancho</h1>
           </div>
 
           <span
-            className={`${robotoMono.className} text-secondary font-bold text-4xl ml-[2rem]`}
+            className={`${robotoMono.className} text-secondary font-bold text-3xl `}
           >
             Full Stack Developer
           </span>
 
-          <p className='ml-[2rem] my-[2rem] max-w-2xl text-pretty'>
+          <p className=' mb-[2rem] mt-[1.5rem] w-[35rem] text-pretty text-sm'>
             Resido en Santiago de Chile y me enfoco la entrega de soluciones de
             alta calidad y valor.
             <br />
@@ -44,7 +45,7 @@ const Home = () => {
           <a
             target='_blank'
             href='https://drive.google.com/file/d/1f9EPuv6IzqY9B4Kw-AiI3Bj9ukwVh-a2/view?usp=sharing'
-            className='ml-[2rem]'
+            className='text-sm'
           >
             <Button word={curriculum} />
           </a>
@@ -59,9 +60,9 @@ const Home = () => {
         <Image
           src={face}
           alt="Óscar Sancho's face"
-          width={400}
-          height={400}
-          className='rounded-full'
+          width={imageSize}
+          height={imageSize}
+          className='rounded-full max-w-[20rem]'
         />
       </a>
     </section>

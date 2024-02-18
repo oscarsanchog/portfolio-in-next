@@ -29,11 +29,15 @@ const navigation = [
   { name: 'Contacto', href: '/#contact', icon: <MdEmail />, current: false },
 ]
 
+const sizeLogo = 53
+
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
   const notify = () =>
-    window.alert('¡Email "oscar.sancho.gonzalez@gmail.com" copiado con éxito!')
+    window.alert(
+      'El email "oscar.sancho.gonzalez@gmail.com" ha sido copiado con éxito.'
+    )
 
   return (
     <nav className='fixed top-0 right-0 left-0 z-40'>
@@ -55,9 +59,9 @@ const Nav = () => {
             <li key={name}>
               <a
                 href={href}
-                className='text-primary hover:text-secondary hover:font-bold transition-colors duration-300 whitespace-nowrap'
+                className={`${robotoMono.className} text-sm text-primary hover:text-secondary hover:font-bold transition-all duration-300 whitespace-nowrap`}
               >
-                <span className={robotoMono.className}>{name}</span>
+                {name}
               </a>
             </li>
           ))}
@@ -68,9 +72,9 @@ const Nav = () => {
           <Image
             src={logo}
             alt="Óscar Sancho's logo"
-            className='mx-auto transition-all duration-300 hover:w-[4rem]'
-            width={59.2}
-            height={59.2}
+            className='mx-auto transition-all duration-300 hover:w-[3.5rem]'
+            width={sizeLogo}
+            height={sizeLogo}
           />
         </a>
 
@@ -82,7 +86,7 @@ const Nav = () => {
                 <CopyToClipboard text={'oscar.sancho.gonzalez@gmail.com'}>
                   <button
                     onClick={notify}
-                    className='text-xl text-primary hover:text-secondary transition-colors duration-300'
+                    className='text-lg text-primary hover:text-secondary transition-colors duration-300'
                   >
                     {icon}
                   </button>
@@ -91,9 +95,9 @@ const Nav = () => {
                 <a
                   target='_blank'
                   href={href}
-                  className='text-primary hover:text-secondary transition-colors duration-300'
+                  className='text-lg text-primary hover:text-secondary transition-colors duration-300'
                 >
-                  <span className='text-xl'>{icon}</span>
+                  {icon}
                 </a>
               )}
             </li>

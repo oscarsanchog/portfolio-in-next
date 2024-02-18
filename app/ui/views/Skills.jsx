@@ -18,13 +18,13 @@ const Skills = () => {
     <div key={name} className='relative'>
       {openProjects && projectName === name && (
         <ul className='text-center w-[10rem] py-[.5rem] absolute bottom-[5rem] left-[-3rem] bg-secondary rounded-3xl '>
-          <h3 className='font-bold text-lg'>{name}</h3>
+          <h3 className='font-bold text-md'>{name}</h3>
           {projects?.map(({ name, link }) => (
             <li
               key={name}
               className='my-2 hover:font-bold hover:text-black transition-all duration-300'
             >
-              <a href={link} target={link === '/#home' ? '_top' : '_blank'}>
+              <a className='text-sm' href={link} target={link === '/#home' ? '_top' : '_blank'}>
                 {name}
               </a>
             </li>
