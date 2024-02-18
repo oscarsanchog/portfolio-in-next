@@ -19,7 +19,7 @@ const Home = () => {
         </span>
 
         <div>
-          <div className='flex items-center gap-[1rem] mt-[2rem] mb-[1rem] ml-[2rem]'>
+          <div className='flex items-center gap-[1rem] mt-[2rem] mb-[1rem] '>
             <span className='text-3xl'>Soy</span>
             <h1 className='text-8xl'>Óscar Sancho</h1>
           </div>
