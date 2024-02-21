@@ -112,7 +112,7 @@ export const technologies = [
   }, // 4
   {
     name: 'Node.js', //7
-    icon: <FaNodeJs title='Node.js' size={iconSize}  />,
+    icon: <FaNodeJs title='Node.js'   />,
     projects: [
       { name: projectsName.moruApp, link: projectsLinks.moruApp },
       {

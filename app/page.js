@@ -19,9 +19,10 @@ const page = () => {
         <Contact />
       </main>
 
-      {/* <footer>
+      <footer>
         <Footer />
-      </footer> */}
+        
+      </footer>
     </div>
   )
 }
