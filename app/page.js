@@ -15,8 +15,8 @@ const page = () => {
       <main className='mx-[2rem]  sm:mx-[7rem]  xl:mx-[14rem] flex flex-1 flex-col items-center  '>
         <Home />
         <Projects />
-        {/* <Skills /> */}
-        {/* <Contact /> */}
+        <Skills />
+        <Contact />
       </main>
 
       {/* <footer>

@@ -51,7 +51,7 @@ const projectsLinks = {
 export const technologies = [
   {
     name: 'HTML', //0
-    icon: <FaHtml5 title='HTML' size={iconSize} className='' />,
+    icon: <FaHtml5 title='HTML' />,
     projects: [
       { name: projectsName.moruApp, link: projectsLinks.moruApp },
       {
@@ -64,7 +64,7 @@ export const technologies = [
   }, // 0
   {
     name: 'CSS', //1
-    icon: <FaCss3Alt title='CSS' size={iconSize} className='' />,
+    icon: <FaCss3Alt title='CSS' />,
     projects: [
       { name: projectsName.moruApp, link: projectsLinks.moruApp },
       {
@@ -77,12 +77,12 @@ export const technologies = [
   }, // 1
   {
     name: 'Sass', //2
-    icon: <FaSass title='Sass' size={iconSize} className='' />,
+    icon: <FaSass title='Sass'  />,
     projects: [],
   }, // 2
   {
     name: 'Tailwind CSS', //3
-    icon: <SiTailwindcss title='Tailwind CSS' size={iconSize} className='' />,
+    icon: <SiTailwindcss title='Tailwind CSS'  />,
     projects: [
       { name: projectsName.moruApp, link: projectsLinks.moruApp },
       { name: projectsName.portfolio, link: projectsLinks.portfolio },
@@ -90,12 +90,12 @@ export const technologies = [
   }, // 2
   {
     name: 'Material UI', //4
-    icon: <SiMui title='Material UI' size={iconSize} className='' />,
+    icon: <SiMui title='Material UI'  />,
     projects: [],
   }, // 12
   {
     name: 'JavaScript',  //5
-    icon: <IoLogoJavascript title='JavaScript' size={iconSize} className='' />,
+    icon: <IoLogoJavascript title='JavaScript'/>,
     projects: [
       { name: projectsName.moruApp, link: projectsLinks.moruApp },
       {
@@ -107,12 +107,12 @@ export const technologies = [
   }, // 3
   {
     name: 'TypeScript', //6
-    icon: <SiTypescript title='TypeScript' size={iconSize - 2} className='' />,
+    icon: <SiTypescript title='TypeScript'  />,
     projects: [{ name: projectsName.todoApp, link: projectsLinks.todoApp }],
   }, // 4
   {
     name: 'Node.js', //7
-    icon: <FaNodeJs title='Node.js' size={iconSize} className='' />,
+    icon: <FaNodeJs title='Node.js' size={iconSize}  />,
     projects: [
       { name: projectsName.moruApp, link: projectsLinks.moruApp },
       {
@@ -125,7 +125,7 @@ export const technologies = [
   }, // 5
   {
     name: 'React', //8
-    icon: <FaReact title='React' size={iconSize} className='' />,
+    icon: <FaReact title='React' />,
     projects: [
       { name: projectsName.moruApp, link: projectsLinks.moruApp },
       {
@@ -138,7 +138,7 @@ export const technologies = [
   }, // 6
   {
     name: 'Redux', //9
-    icon: <SiRedux title='Redux' size={iconSize} className='' />,
+    icon: <SiRedux title='Redux' />,
     projects: [
       { name: projectsName.moruApp, link: projectsLinks.moruApp },
       {
@@ -149,12 +149,12 @@ export const technologies = [
   }, // 7
   {
     name: 'Next.js', //10
-    icon: <SiNextdotjs title='Next.js' size={iconSize} className='' />,
+    icon: <SiNextdotjs title='Next.js' />,
     projects: [{ name: projectsName.portfolio, link: projectsLinks.portfolio }],
   }, // 8
   {
     name: 'Jest',
-    icon: <SiJest title='Jest' size={iconSize} className='' />,
+    icon: <SiJest title='Jest'  />,
     projects: [
       {
         name: projectsName.driverRaceFinder,
@@ -164,7 +164,7 @@ export const technologies = [
   }, // 9
   {
     name: 'Express.js',
-    icon: <SiExpress title='Express.js' size={iconSize} className='' />,
+    icon: <SiExpress title='Express.js'/>,
     projects: [
       { name: projectsName.moruApp, link: projectsLinks.moruApp },
       {
@@ -175,7 +175,7 @@ export const technologies = [
   }, // 10
   {
     name: 'Sequelize',
-    icon: <SiSequelize title='Sequelize' size={iconSize} className='' />,
+    icon: <SiSequelize title='Sequelize'  />,
     projects: [
       { name: projectsName.moruApp, link: projectsLinks.moruApp },
       {
@@ -186,7 +186,7 @@ export const technologies = [
   }, // 11
   {
     name: 'Postman',
-    icon: <SiPostman title='Postman' size={iconSize} className='' />,
+    icon: <SiPostman title='Postman'  />,
     projects: [
       projectsName.moruApp,
       projectsName.driverRaceFinder,
@@ -199,7 +199,7 @@ export const technologies = [
   }, // 12
   {
     name: 'PostgreSQL',
-    icon: <BiLogoPostgresql title='PostgreSQL' size={iconSize} className='' />,
+    icon: <BiLogoPostgresql title='PostgreSQL'/>,
     projects: [
       { name: projectsName.moruApp, link: projectsLinks.moruApp },
       {
