@@ -17,6 +17,9 @@ module.exports = {
         tertiary: '#e2bcbc',
         
       },
+      screens: {
+        'lg': '1125px', // Cambiar el punto de quiebre de lg a 1125px
+      },
     },
   },
   plugins: [

@@ -16,7 +16,7 @@ const Project = ({
   const [showFullDescription, setShowFullDescription] = useState(false)
 
   return (
-    <div className='max-w-[20rem] h-[33rem] bg-secondarybg rounded-xl shadow-xl overflow-hidden transition duration-200 hover:scale-105 mb-[4rem]'>
+    <div className='max-w-[20rem] h-[33rem] bg-secondarybg rounded-xl shadow-xl overflow-hidden transition duration-200 hover:scale-105 mb-[4rem] mx-auto'>
       <div className='flex flex-col'>
         <a href={link} target='_blank'>
           <Image
