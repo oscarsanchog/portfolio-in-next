@@ -9,7 +9,7 @@ const Contact = () => {
     size: 80,
     color: 'text-primary',
     transition:
-      'transition-all duration-300 hover:font-bold hover:text-secondary hover:size-[6rem]',
+      'transition-all duration-300 hover:font-bold hover:text-secondary hover:size-[5rem] md:hover:size-[6rem]',
   }
 
   const contactIcons = [
@@ -17,7 +17,6 @@ const Contact = () => {
       name: 'Email',
       icon: (
         <MdEmail
-          size={iconChars.size}
           className={`${iconChars.color} ${iconChars.transition}`}
         />
       ),
@@ -27,7 +26,6 @@ const Contact = () => {
       name: 'WhatsApp',
       icon: (
         <FaWhatsapp
-          size={iconChars.size}
           className={`${iconChars.color} ${iconChars.transition}`}
         />
       ),
@@ -37,7 +35,6 @@ const Contact = () => {
       name: 'LinkedIn',
       icon: (
         <FaLinkedin
-          size={iconChars.size}
           className={`${iconChars.color} ${iconChars.transition}`}
         />
       ),
@@ -47,17 +44,17 @@ const Contact = () => {
 
 
   return (
-    <section id='contact' className='mt-[13rem] flex flex-col justify-center items-center gap-[4rem] border-t border-b max-w-screen-xl py-[6rem]'>
+    <section id='contact' className='mt-[4.5rem] lg:mt-[9rem] w-full flex flex-col justify-center items-center gap-[2.5rem] sm:gap-[4rem] border-t border-b max-w-screen-xl py-[4rem] sm:py-[6rem]'>
       {/* <h2 className='text-5xl mb-[2.5rem]'>Contáctame</h2> */}
 
-        <h2 className={`${robotoMono.className} antialiased text-[3rem] text-secondary `}>
+        <h2 className={`${robotoMono.className} antialiased text-[2rem] sm:text-[3rem] text-secondary `}>
           Contáctame aquí:
         </h2>
 
-        <ul className='flex items-center m-auto gap-36  '>
+        <ul className='flex gap-11 sm:gap-36 '>
           {contactIcons.map(({ name, icon, link }, index) => (
             <li title={name} key={index}>
-              <a target='_blank' href={link}>
+              <a className='text-[4rem] md:text-[5rem]' target='_blank' href={link}>
                 {icon}
               </a>
             </li>

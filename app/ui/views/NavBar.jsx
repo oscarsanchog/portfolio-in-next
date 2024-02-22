@@ -79,7 +79,7 @@ const Nav = () => {
         </a>
 
         {/* Contact */}
-        <ul className='flex space-x-7 justify-end '>
+        <ul className=' space-x-7 justify-end hidden sm:flex '>
           {contactLinks.map(({ href, icon }) => (
             <li key={href}>
               {href.includes('@gmail.com') ? (

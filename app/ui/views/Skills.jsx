@@ -15,7 +15,7 @@ const Skills = () => {
   } */
 
   const technology = (name, icon, projects) => (
-    <div key={name} className='relative'>
+    <div key={name} className='relative m-[.8rem] lg:m-[2rem]'>
       {openProjects && projectName === name && (
         <ul className='text-center w-[10rem] py-[.5rem] absolute bottom-[5rem] left-[-3rem] bg-secondary rounded-3xl '>
           <h3 className='font-bold text-md'>{name}</h3>
@@ -24,7 +24,11 @@ const Skills = () => {
               key={name}
               className='my-2 hover:font-bold hover:text-black transition-all duration-300'
             >
-              <a className='text-sm' href={link} target={link === '/#home' ? '_top' : '_blank'}>
+              <a
+                className='text-sm'
+                href={link}
+                target={link === '/#home' ? '_top' : '_blank'}
+              >
                 {name}
               </a>
             </li>
@@ -42,7 +46,7 @@ const Skills = () => {
             setOpenProjects(false)
           }, 230)
         }}
-        className='hover:scale-125 hover:text-secondary transition duration-300'
+        className='text-[3rem] md:text-[3.6rem] hover:scale-125 hover:text-secondary transition duration-300 '
       >
         {icon}
       </button>
@@ -50,19 +54,15 @@ const Skills = () => {
   )
 
   return (
-    <section id='skills' className='mt-[9rem]'>
-      <h2 className={`${robotoMono.className} antialiased text-5xl mb-[3rem]`}>Tech Skills</h2>
+    <section id='skills' className='mt-[6rem] lg:mt-[9rem] w-full'>
+      <h2 className={`${robotoMono.className} antialiased text-5xl mb-[3rem]`}>
+        Tech Skills
+      </h2>
 
-      <div className='h-auto mb-[3rem]  flex justify-evenly'>
-        {technologies
-          .slice(0, 8)
-          .map(({ name, icon, projects }) => technology(name, icon, projects))}
-      </div>
-
-      <div className='h-auto mx-auto flex justify-between'>
-        {technologies
-          .slice(-8)
-          .map(({ name, icon, projects }) => technology(name, icon, projects))}
+      <div className='h-auto flex justify-center flex-wrap'>
+        {technologies.map(({ name, icon, projects }) =>
+          technology(name, icon, projects)
+        )}
       </div>
     </section>
   )

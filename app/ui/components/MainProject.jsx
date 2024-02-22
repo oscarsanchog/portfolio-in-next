@@ -42,7 +42,7 @@ const MainProject = ({
         </a>
       )}
 
-      <p className='max-w-[20rem] max-h-[12rem] overflow-auto text-pretty text-left text-sm'>
+      <p className='max-w-[20rem] max-h-[12rem] overflow-auto text-pretty text-left text-sm md:mx-[2rem]'>
         {showFullDescription ? description : `${description.slice(0, 73)}...`}
       </p>
 
@@ -56,7 +56,7 @@ const MainProject = ({
   )
 
   return (
-    <div className='bg-secondarybg rounded-xl shadow-xl overflow-hidden transition duration-200 hover:scale-105 mb-[4rem]'>
+    <div className='bg-secondarybg rounded-xl shadow-xl overflow-hidden transition duration-200 hover:scale-105 mb-[4rem] hidden md:block'>
       <div className='flex justify-start text-center'>
         {position % 2 === 0 ? (
           <>

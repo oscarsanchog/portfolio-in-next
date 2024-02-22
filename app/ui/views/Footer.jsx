@@ -1,6 +1,6 @@
 'use client'
 
-import { logo } from '@/public/imgs'
+import { logo, face } from '@/public/imgs'
 import Image from 'next/image'
 import { FaWhatsapp } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
@@ -68,23 +68,31 @@ const notify = () =>
   window.alert('¡Email "oscar.sancho.gonzalez@gmail.com" copiado con éxito!')
 
 const sizeLogo = 53
+const sizeImg = 68
 
 const Footer = () => {
   return (
-    <div className='flex flex-col  mt-[9rem]'>
-      <div className=' py-[4rem] mt-[7rem]  bg-secondarybg grid grid-cols-3'>
-        <div className=' mt-1 flex flex-col items-center gap-[2rem]'>
-          <a title='Óscar Sancho' href='/#home' className=''>
+    <div className='flex flex-col  mt-[1rem] lg:mt-[9rem] w-full'>
+      <div className=' py-[4rem] mt-[7rem]  bg-secondarybg flex justify-around  flex-wrap'>
+        <div className='  flex flex-col items-center gap-[2rem]'>
+          <a title='Óscar Sancho' href='https://www.linkedin.com/in/oscarsanchog/' target='_blank' className=''>
             <Image
               src={logo}
               alt="Óscar Sancho's logo"
-              className='mx-auto transition-all duration-300 hover:w-[4rem]'
+              className='mx-auto transition-all duration-300 hover:w-[4rem] hidden sm:block'
               width={sizeLogo}
               height={sizeLogo}
             />
+            <Image
+              src={face}
+              alt="Óscar Sancho's logo"
+              className='rounded-full max-w-[20rem] border-secondary border-r-2 border-b-2 transition-all duration-300 hover:w-[4rem] sm:hidden'
+              width={sizeImg}
+              height={sizeImg}
+            />
           </a>
 
-          <ul className=' flex flex-col gap-5 w-[22rem]'>
+          <ul className=' flex flex-col gap-5 w-[22rem]  items-center'>
             {contacts.map(({ name, icon, link }) => (
               <li key={name}>
                 {link.includes('@gmail.com') ? (
@@ -112,7 +120,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='flex flex-col gap-6 justify-center items-center'>
+        <div className='flex flex-col gap-6 justify-center items-center mt-[5rem] sm:mt-0'>
           <h3 className='font-semibold text-primary text-xl'>Soluciones</h3>
 
           <ul className='list-disc'>
@@ -124,12 +132,12 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='flex flex-col items-center gap-10'>
+        <div className='flex flex-col items-center gap-10 mt-[5rem] md:mt-0'>
           <span className='font-semibold text-primary text-xl'>
             Sitio desarrollado con:
           </span>
 
-          <ul className='flex flex-wrap w-[20rem] justify-center gap-9'>
+          <ul className='flex flex-wrap w-[20rem] justify-center gap-9 text-[3rem] '>
             {techs.map(({ name, icon }) => (
               <li key={name} title={name}>
                 {icon}
