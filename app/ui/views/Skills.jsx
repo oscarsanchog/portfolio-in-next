@@ -59,7 +59,7 @@ const Skills = () => {
         Tech Skills
       </h2>
 
-      <div className='h-auto  flex justify-center flex-wrap'>
+      <div className='h-auto flex justify-center flex-wrap'>
         {technologies.map(({ name, icon, projects }) =>
           technology(name, icon, projects)
         )}

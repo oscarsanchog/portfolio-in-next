@@ -10,11 +10,11 @@ const imageSize = 350
 
 const Home = () => {
   return (
-    <section id='home' className='flex mt-[7rem] lg:mt-[9rem] justify-between items-center w-full '>
+    <section id='home' className='flex mt-[7rem] lg:mt-[9rem] justify-between items-center w-full'>
       <div className='mx-auto lg:mx-0'>
         <span className=' relative  flex gap-2  items-center text-xl'>
           Hola
-          <span className=' text-xl '>
+          <span className='text-xl'>
             <MdWavingHand />
           </span>
           <span className='lg:hidden'>, soy</span>
