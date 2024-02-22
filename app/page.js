@@ -20,23 +20,6 @@ const page = () => {
       <footer>
         <Footer />
       </footer>
-
-      <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi odio
-        quis ratione nesciunt fuga dolor eos quo eveniet, architecto consequatur
-        illum aspernatur, necessitatibus modi sed nemo soluta! Officiis, placeat
-        tenetur. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Reprehenderit iure accusamus corporis iusto recusandae? Facilis sed
-        laboriosam similique doloribus nihil! Blanditiis ratione libero incidunt
-        voluptatum suscipit? Error perspiciatis laborum illum.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi odio
-        quis ratione nesciunt fuga dolor eos quo eveniet, architecto consequatur
-        illum aspernatur, necessitatibus modi sed nemo soluta! Officiis, placeat
-        tenetur. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Reprehenderit iure accusamus corporis iusto recusandae? Facilis sed
-        laboriosam similique doloribus nihil! Blanditiis ratione libero incidunt
-        voluptatum suscipit? Error perspiciatis laborum illum.
-      </div>
     </div>
   )
 }
