@@ -92,7 +92,7 @@ const Footer = () => {
             />
           </a>
 
-          <ul className=' flex flex-col gap-5 w-[22rem]  items-center'>
+          <ul className=' flex flex-col gap-5 w-[22rem] items-center sm:items-start'>
             {contacts.map(({ name, icon, link }) => (
               <li key={name}>
                 {link.includes('@gmail.com') ? (
