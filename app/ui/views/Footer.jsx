@@ -137,7 +137,7 @@ const Footer = () => {
             Sitio desarrollado con:
           </span>
 
-          <ul className='flex flex-wrap w-[20rem] justify-center gap-9 text-[3rem] '>
+          <ul className='flex flex-wrap max-w-[18rem] justify-center gap-9 text-[3rem] '>
             {techs.map(({ name, icon }) => (
               <li key={name} title={name}>
                 {icon}
