@@ -8,6 +8,7 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { IoDocumentText } from 'react-icons/io5'
 import { technologies } from '@/app/lib/data'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { resumeLink } from '@/app/lib/data'
 
 const iconChars = {
   size: 18,
@@ -40,7 +41,7 @@ const contacts = [
   {
     name: 'Ver currículum',
     icon: <IoDocumentText size={iconChars.size} />,
-    link: 'https://drive.google.com/file/d/1f9EPuv6IzqY9B4Kw-AiI3Bj9ukwVh-a2/view?usp=sharing',
+    link: resumeLink,
   },
 ]
 
