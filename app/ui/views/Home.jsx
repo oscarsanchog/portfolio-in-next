@@ -3,6 +3,7 @@ import { MdWavingHand } from 'react-icons/md'
 import Button from '../components/Button'
 import { face } from '@/public/imgs'
 import { contactLinks } from '@/public/imgs'
+import { resumeLink } from '@/app/lib/data'
 import Image from 'next/image'
 
 const curriculum = 'Curriculum Vitae'
@@ -45,7 +46,7 @@ const Home = () => {
 
           <a
             target='_blank'
-            href='https://drive.google.com/file/d/1f9EPuv6IzqY9B4Kw-AiI3Bj9ukwVh-a2/view?usp=sharing'
+            href={resumeLink}
             className='text-sm  '
           >
             <Button word={curriculum}  />

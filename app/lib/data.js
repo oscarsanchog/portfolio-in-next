@@ -48,6 +48,8 @@ const projectsLinks = {
   portfolio: '/#home',
 }
 
+export const resumeLink = 'https://drive.google.com/file/d/194_zAjhKP125VQULE3VT5zrG3gC3RzpI/view?usp=sharing'
+
 export const technologies = [
   {
     name: 'HTML', //0
