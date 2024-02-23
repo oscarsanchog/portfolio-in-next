@@ -38,7 +38,7 @@ const Home = () => {
             alta calidad y valor.
             <br />
             Disfruto colaborando en equipos multidisciplinarios para alcanzar
-            objetivos comunes y me fascina conectar con otros profesionales
+            objetivos comunes y me gusta conectar con otros profesionales
             apasionados por el desarrollo de software.
             <br />
             Contáctame para desarrollar soluciones juntos.
