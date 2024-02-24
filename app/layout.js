@@ -13,7 +13,7 @@ export const metadata = {
     url: 'https://oscarsancho-portfolio.vercel.app/',
     title: 'Óscar Sancho',
     description: 'Portafolio de Oscar Sancho, Full Stack Developer. Construido con Next.js 14.',
-    siteName: 'Oscasr Sancho Portfolio',
+    siteName: 'Oscar Sancho Portfolio',
     images: [
       {
         url: '/opengraph-image.png',
